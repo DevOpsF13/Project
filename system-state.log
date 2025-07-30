@@ -1,0 +1,18 @@
+[2025-07-30 13:37:45] --- SYSTEM STATUS ---
+ Memory usage:
+               total        used        free      shared  buff/cache   available
+Mem:            10Gi       3.9Gi       2.8Gi        65Mi       3.9Gi       6.9Gi
+Swap:          2.0Gi          0B       2.0Gi
+ Disk usage:
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.1G  1.8M  1.1G   1% /run
+/dev/sda3        98G   25G   68G  27% /
+tmpfs           5.3G  3.1M  5.3G   1% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+/dev/sda2       512M  6.1M  506M   2% /boot/efi
+tmpfs           1.1G  112K  1.1G   1% /run/user/1000
+/dev/sr0         58M   58M     0 100% /media/devops/VBox_GAs_7.1.6
+⚙ CPU load:
+%Cpu(s):  0.0 us,  1.7 sy,  0.0 ni, 98.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+ Active processes: 304
+
