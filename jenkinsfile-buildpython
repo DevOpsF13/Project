@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git checkout') {
+            steps {
+                git(
+                    branch: 'main',
+                    credentialsId: 'a5884296-42db-4e18-a653-253d9127ee4c',
+                    url: 'https://github.com/DevOpsF13/Project'
+                )
+            }
+        }
+        stage('Build Image') {
+            steps {
+                sh('''
+                    docker build -t back_up -f Dockerfile-py .
+                    docker push back_up
+                ''')
+            }
+        }
+    }
+}
