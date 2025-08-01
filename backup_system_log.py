@@ -8,7 +8,7 @@ from datetime import datetime
 
 BACKUP_DIR = os.getenv("BACKUP_DIR", "backup")
 BACKUP_INTERVAL = int(os.getenv("BACKUP_INTERVAL", 5))
-SOURCE_FILE = "system-state.log"
+SOURCE_FILE = os.getenv("SOURCE_FILE", "system-state.log")
 
 
 os.makedirs(BACKUP_DIR, exist_ok=True)

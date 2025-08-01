@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+
+WORKDIR /py-container
+
+
+COPY backup_system_log.py .
+
+
+ENV BACKUP_INTERVAL=5
+
+CMD ["python3", "backup_system_log.py"]

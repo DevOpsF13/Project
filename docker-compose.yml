@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  system-state:
+    image: system-state
+    container_name: system-state
+    volumes:
+      - shared-logs:/sh-container
+
+  backup:
+    image: back_up
+    container_name: backup
+    environment:
+      - BACKUP_INTERVAL=5
+      - BACKUP_DIR=backup
+      - SOURCE_FILE=/sh-container/system-state.log
+    volumes:
+      - shared-logs:/sh-container
+
+volumes:
+  shared-logs:
